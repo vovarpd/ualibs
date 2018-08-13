@@ -4,7 +4,9 @@
 [![Build Status](https://scrutinizer-ci.com/g/VChukh/ualibs/badges/build.png?b=master)](https://scrutinizer-ci.com/g/VChukh/ualibs/build-status/master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/VChukh/ualibs/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![Build Status](https://travis-ci.org/VChukh/ualibs.svg?branch=master)](https://travis-ci.org/VChukh/ualibs)
-
+[![Latest Stable Version](https://poser.pugx.org/vchukh/ualibs/v/stable)](https://packagist.org/packages/vchukh/ualibs)
+[![Total Downloads](https://poser.pugx.org/vchukh/ualibs/downloads)](https://packagist.org/packages/vchukh/ualibs)
+[![License](https://poser.pugx.org/vchukh/ualibs/license)](https://packagist.org/packages/vchukh/ualibs)
 
 UaLibs is a simple PHP library for fetching User-Agent string for different browsers, like Chrome, Edge, Opera, Safari, Internet Explorer, Android Webkit.
 
