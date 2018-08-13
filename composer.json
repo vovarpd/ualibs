@@ -1,5 +1,5 @@
 {
-  "name": "vchukh/ualib",
+  "name": "vchukh/ualibs",
   "description": "User-Agents liibrary",
   "license": "Apache-2.0",
   "keywords": [
@@ -15,5 +15,8 @@
       "name": "Volodymyr Chukh",
       "email": "vovka2008@gmail.com"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": { "UaLibs\\": "src/UaLibs" }
+  }
 }
