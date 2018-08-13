@@ -33,14 +33,14 @@ class UaLibs {
 	 * @return array
 	 */
 	public function get(): array {
-		return $this->getUserAgents( null );
+		return $this->getUserAgents();
 	}
 
 	/**
 	 * @return null|string
 	 */
 	public function getRandom(): ?string {
-		return array_rand( $this->getUserAgents( null ) );
+		return array_rand( $this->getUserAgents() );
 	}
 
 	/**
@@ -146,11 +146,15 @@ class UaLibs {
 	 *
 	 * @return array
 	 */
-	protected function getUserAgents( ?string $lib ): array {
+	protected function getUserAgents( ?string $lib = null ): array {
 		if ( ! empty( $lib ) ) {
 			$lib_path = __DIR__ . '/libs/' . $lib . '.txt';
+			$data     = file( $lib_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+			if ( ! $data ) {
+				$data = [];
+			}
 
-			return file_exists( $lib_path ) ? file( $lib_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES ) : [];
+			return file_exists( $lib_path ) ? $data : [];
 		} else {
 			$list = [];
 			// combine all available libs and return it as array
@@ -159,7 +163,11 @@ class UaLibs {
 				if ( $filename->isDir() ) {
 					continue;
 				}
-				$list = array_merge( $list, file( $filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES ) );
+				$data = file( $filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+				if ( ! $data ) {
+					$data = [];
+				}
+				$list = array_merge( $list, $data );
 			}
 			$list = array_values( array_unique( $list ) );
 
