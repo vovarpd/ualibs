@@ -21,7 +21,7 @@ Add ualibs in your composer.json or create a new composer.json:
 ```js
 {
     "require": {
-        "vchukh/ualibs": "~1.0"
+        "vchukh/ualibs": "^0.1"
     }
 }
 ```
