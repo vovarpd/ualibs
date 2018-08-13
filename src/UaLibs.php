@@ -40,7 +40,7 @@ class UaLibs {
 	 * @return null|string
 	 */
 	public function getRandom(): ?string {
-		return array_rand( $this->getUserAgents() );
+		return $this->array_rand_value( $this->getUserAgents() );
 	}
 
 	/**
@@ -54,7 +54,7 @@ class UaLibs {
 	 * @return null|string
 	 */
 	public function getAndroidRandom(): ?string {
-		return array_rand( $this->getAndroid() );
+		return $this->array_rand_value( $this->getAndroid() );
 	}
 
 	/**
@@ -68,7 +68,7 @@ class UaLibs {
 	 * @return null|string
 	 */
 	public function getChromeRandom(): ?string {
-		return array_rand( $this->getChrome() );
+		return $this->array_rand_value( $this->getChrome() );
 	}
 
 	/**
@@ -82,7 +82,7 @@ class UaLibs {
 	 * @return null|string
 	 */
 	public function getEdgeRandom(): ?string {
-		return array_rand( $this->getEdge() );
+		return $this->array_rand_value( $this->getEdge() );
 	}
 
 	/**
@@ -96,7 +96,7 @@ class UaLibs {
 	 * @return null|string
 	 */
 	public function getFirefoxRandom(): ?string {
-		return array_rand( $this->getFirefox() );
+		return $this->array_rand_value( $this->getFirefox() );
 	}
 
 	/**
@@ -110,7 +110,7 @@ class UaLibs {
 	 * @return null|string
 	 */
 	public function getInternetExplorerRandom(): ?string {
-		return array_rand( $this->getInternetExplorer() );
+		return $this->array_rand_value( $this->getInternetExplorer() );
 	}
 
 	/**
@@ -124,7 +124,7 @@ class UaLibs {
 	 * @return null|string
 	 */
 	public function getOperaRandom(): ?string {
-		return array_rand( $this->getOpera() );
+		return $this->array_rand_value( $this->getOpera() );
 	}
 
 	/**
@@ -138,7 +138,7 @@ class UaLibs {
 	 * @return null|string
 	 */
 	public function getSafariRandom(): ?string {
-		return array_rand( $this->getSafari() );
+		return $this->array_rand_value( $this->getSafari() );
 	}
 
 	/**
@@ -175,4 +175,16 @@ class UaLibs {
 		}
 	}
 
+	/**
+	 * @param array $arr
+	 *
+	 * @return null|string
+	 */
+	protected function array_rand_value( array $arr ): ?string {
+		if ( empty( $arr ) ) {
+			return null;
+		}
+
+		return $arr[ array_rand( $arr ) ];
+	}
 }
