@@ -11,9 +11,6 @@ matrix:
   - php: nightly
   fast_finish: true
 
-script:
-- vendor/bin/phpunit --configuration=phpunit.xml.dist
-
 before_script:
 # php deps
 - composer self-update
