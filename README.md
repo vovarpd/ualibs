@@ -14,12 +14,12 @@ It uses User-Agent data from next package: https://github.com/tamimibrahim17/Lis
 
 ### Composer
 
-Add ua-libs in your composer.json or create a new composer.json:
+Add ualibs in your composer.json or create a new composer.json:
 
 ```js
 {
     "require": {
-        "vchukh/ua-libs": "~1.0"
+        "vchukh/ualibs": "~1.0"
     }
 }
 ```
@@ -34,9 +34,6 @@ Composer will generate the autoloader file automatically. So you only have to in
 Typically its located in the vendor dir and its called autoload.php
 
 ## Basic Usage:
-This library is using the PSR-0 standard: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-So you can use any autoloader which fits into this standard.
-The tests directory contains an example bootstrap file.
 
 ``` php
 <?php

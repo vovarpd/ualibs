@@ -17,6 +17,6 @@
     }
   ],
   "autoload": {
-    "psr-4": { "UaLibs\\": "src/UaLibs" }
+    "psr-4": { "UaLibs\\": "src/" }
   }
 }
