@@ -1,0 +1,19 @@
+{
+  "name": "vchukh/ualib",
+  "description": "User-Agents liibrary",
+  "license": "Apache-2.0",
+  "keywords": [
+    "User Agents library",
+    "PHP"
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Volodymyr Chukh",
+      "email": "vovka2008@gmail.com"
+    }
+  ]
+}
